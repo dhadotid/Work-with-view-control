@@ -22,27 +22,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bYw-AK-ges">
                                 <rect key="frame" x="16" y="40" width="359" height="327"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nso-i9-DzQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nso-i9-DzQ">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Please Input Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oI-bq-bZA">
-                                        <rect key="frame" x="0.0" y="20.5" width="359" height="97.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Please Input Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oI-bq-bZA">
+                                        <rect key="frame" x="0.0" y="20.5" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2N-1C-dMO">
-                                        <rect key="frame" x="0.0" y="118" width="359" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2N-1C-dMO">
+                                        <rect key="frame" x="0.0" y="50.5" width="359" height="30"/>
                                         <state key="normal" title="Set Default Label"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYb-hx-Oh6"/>
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="AkD-yQ-qq8">
-                                        <rect key="frame" x="0.0" y="148" width="336" height="179"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="336" height="179"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="AkD-yQ-qq8" secondAttribute="height" multiplier="15:8" id="mMJ-G3-4Zi"/>
@@ -51,6 +51,9 @@
                                             <outletCollection property="gestureRecognizers" destination="U8u-Xk-oQL" appends="YES" id="XaU-9x-6Sp"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tb2-Nj-wHU" customClass="RatingControl" customModule="Basic_UI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="259.5" width="200" height="67.5"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="AkD-yQ-qq8" secondAttribute="trailing" constant="23" id="2vg-Xd-OYh"/>
@@ -74,6 +77,7 @@
                         <outlet property="nameLabel" destination="Nso-i9-DzQ" id="dPC-gm-3jE"/>
                         <outlet property="nameTextField" destination="7oI-bq-bZA" id="oqt-IF-UZ5"/>
                         <outlet property="photoImageView" destination="AkD-yQ-qq8" id="oNe-Yb-MK2"/>
+                        <outlet property="ratingControl" destination="Tb2-Nj-wHU" id="Msr-PH-vQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
